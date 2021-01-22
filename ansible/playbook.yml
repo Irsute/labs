@@ -4,22 +4,12 @@
   become_user: root
   gather_facts: true
 
-  user: benji comment="grand frère" group=margot
   tasks:
     - name: configure timezone
       timezone: 
         name: Europe/Paris
     - name: install ansible
       apt:
-        name: ansible 
+        name:  ansible
         state: latest
       when: "'ansible-host' in inventory_hostname"
-    - name: add group
-      group:
-        name: thenard
-        state: present
-    - name: add user
-      user:
-        name: Margot
-        comment: "licorne"
-        group: thenard
