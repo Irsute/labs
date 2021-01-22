@@ -25,6 +25,10 @@
         state: present
       when: "'ansible-host' in inventory_hostname"
 
+    - name: create ansible directory
+      file: /home/vagant/ansible
+      state: directory
+
     - name: add ansible.cfg to ansible dir
       copy:
         dest: /home/vagrant/ansible/ansible.cfg
