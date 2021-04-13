@@ -1,0 +1,18 @@
+# Do not synchronize the iso file used to build the boxes
+/iso/*
+!/iso/.gitkeep
+
+/output-vmware/
+
+/*.box
+
+# Do not synchronize the packer cache folder
+/packer_cache/
+
+# Do not synchronize the folder containing the result box
+/result_box/*
+!/result_box/.gitkeep
+
+# Do not synchronize the folder containing the packer binaries
+/bin/*
+!/bin/.gitkeep

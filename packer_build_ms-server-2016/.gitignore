@@ -1,6 +1,0 @@
-/iso/*
-/output-vmware/
-/*.box
-/packer_cache/
-/result_box/*
-/bin/*
