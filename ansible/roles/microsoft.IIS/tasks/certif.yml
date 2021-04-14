@@ -1,0 +1,12 @@
+---
+  # I've used the Global Sign One for the exemple
+- name: copy root CA on target
+  win_copy:
+    src: ../files/racine.pem
+    dest: C:\Temp\
+
+- name: Import root certificate
+  win_certificate_store:
+    path: C:\Temp\racine.pem
+    store_name: AuthRoot
+    state: present

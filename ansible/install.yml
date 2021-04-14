@@ -1,0 +1,13 @@
+---
+- hosts: all
+  gather_facts: no
+  vars:
+    - quick_start: True
+
+  tasks:
+  - name: configure timezone
+    timezone: 
+      name: Europe/Paris
+
+  roles:
+    - microsoft.IIS

@@ -1,0 +1,19 @@
+---
+- include_tasks: certif.yml
+
+- name: Install IIS Server 10
+  win_feature:
+    name: 
+      - web-Server
+      - web-Mgmt-Console
+      - web-asp-Net
+      - web-asp-Net45
+      - web-Net-Ext
+      - web-Net-Ext45
+    state: present
+
+# Remove Default Web Site and the standard port 80 binding
+- name: Remove Default Web Site
+  win_iis_website:
+    name: "Default Web Site"
+    state: absent
