@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   boxes = [
     {
       :name => "vagrant-dl-web-d",
-      :box => "../packer_build/result_box/windows_2016_virtualbox.box",
+      :box => "gusztavvargadr/windows-server",
       :ram => 2048,
       :vcpu => 2,
       :ip => "10.0.0.2"
